@@ -67,6 +67,56 @@
                         useFile
                       </a></li>
                     
+                      <li><a
+                        href='#useentrystructure'
+                        class='regular pre-open'>
+                        useEntryStructure
+                      </a></li>
+                    
+                      <li><a
+                        href='#usesectionstructure'
+                        class='regular pre-open'>
+                        useSectionStructure
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spec-support'
+                  class="h5 bold black caps">
+                  Spec Support
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#normalizeseed'
+                        class='regular pre-open'>
+                        normalizeSeed
+                      </a></li>
+                    
+                      <li><a
+                        href='#renderinentry'
+                        class='regular pre-open'>
+                        renderInEntry
+                      </a></li>
+                    
+                      <li><a
+                        href='#renderhookinentry'
+                        class='regular pre-open'>
+                        renderHookInEntry
+                      </a></li>
+                    
                     </ul>
                   
                   
@@ -199,7 +249,7 @@
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6a2a0e151fd69698620455495a3f7babf6e2e3ef/entry_types/scrolled/package/src/frontend/Image.js#L13-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/src/frontend/Image.js#L13-L32'>
         <span>View source</span>
       </a>
     </div>
@@ -374,7 +424,686 @@ imageFile <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6a2a0e151fd69698620455495a3f7babf6e2e3ef/entry_types/scrolled/package/src/entryState/useFile.js#L28-L36'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/src/entryState/useFile.js#L26-L34'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useentrystructure'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useEntryStructure()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the chapters, sections
+and content elements of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useEntryStructure()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> structure = useEntryStructure();
+structure <span class="hljs-comment">// =&gt;</span>
+  [
+    {
+      <span class="hljs-attr">permaId</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Chapter 1'</span>,
+      <span class="hljs-attr">summary</span>: <span class="hljs-string">'An introductory chapter'</span>,
+      <span class="hljs-attr">sections</span>: [
+        {
+          <span class="hljs-attr">transition</span>: <span class="hljs-string">'scroll'</span>,
+          <span class="hljs-attr">foreground</span>: [
+            {
+              <span class="hljs-attr">type</span>: <span class="hljs-string">'heading'</span>,
+              <span class="hljs-attr">props</span>: {
+                <span class="hljs-attr">children</span>: <span class="hljs-string">'Heading'</span>
+              }
+            },
+            {
+              <span class="hljs-attr">type</span>: <span class="hljs-string">'textBlock'</span>,
+              <span class="hljs-attr">props</span>: {
+                <span class="hljs-attr">children</span>: <span class="hljs-string">'Some text'</span>
+              }
+            }
+          ]
+        }
+      ],
+    }
+  ]</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/src/entryState/structure.js#L41-L55'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usesectionstructure'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useSectionStructure(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the content elements
+of section.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useSectionStructure(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sectionPermaId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> section = useSectionStructure({<span class="hljs-attr">sectionPermaId</span>: <span class="hljs-number">4</span>});
+section <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">transition</span>: <span class="hljs-string">'scroll'</span>,
+    <span class="hljs-attr">foreground</span>: [
+      {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">'heading'</span>,
+        <span class="hljs-attr">props</span>: {
+          <span class="hljs-attr">children</span>: <span class="hljs-string">'Heading'</span>
+        }
+      },
+      {
+        <span class="hljs-attr">type</span>: <span class="hljs-string">'textBlock'</span>,
+        <span class="hljs-attr">props</span>: {
+          <span class="hljs-attr">children</span>: <span class="hljs-string">'Some text'</span>
+        }
+      }
+    ]
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/src/entryState/structure.js#L87-L92'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spec-support'>
+      Spec Support
+    </h3>
+    
+  </div>
+  
+
+  <p>Helper functions to use in specs.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='normalizeseed'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>normalizeSeed(options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Construct data structure that resembles seed generated by server
+side JBuilder templates.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>normalizeSeed(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.imageFileUrlTemplates</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Mapping of url template names to url templates.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.imageFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with image file attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.chapters</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with chapter attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sections</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with section attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.contentElements</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with content element attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.fileUrlTemplates</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        Data that resembles seed generated by server side rendering.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/spec/support/normalizeSeed.js#L13-L47'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='renderinentry'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>renderInEntry(ui, options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a component that depends on entry state. Accepts all options
+supported by <a href="https://testing-library.com/docs/react-testing-library/api#render"><code>render</code> of
+<code>@testing-library/react</code></a>.</p>
+<p>The <code>seed</code> option can be used to simulate rendering the component
+in the published entry. Data passed in this option would normally
+be rendered in a server side JBuilder template.</p>
+<p>The <code>setup</code> option can be used to simulate rendering the component
+in the editor where data is synchronized from Backbone models.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>renderInEntry(ui: React.Component, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ui</span> <code class='quiet'>(React.Component)</code>
+	    React component
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.seed</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Seed data for entry state. Passed through 
+<a href="#normalizeseed">normalizeSeed</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.setup</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>  Function that gets called with the internal entry state dispatch
+function. The normalized seed constructed from the 
+<code>seed</code>
+ option
+is passed as a second parameter.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>...options</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/spec/support/rendering.js#L28-L34'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='renderhookinentry'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>renderHookInEntry(callback, options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a hook that depends on entry state.  Accepts all options
+supported by <a href="https://react-hooks-testing-library.com/reference/api"><code>renderHook</code> of
+<code>@testing-library/react-hooks</code></a></p>
+<p>Can be used to test selector hooks which extract information from
+the entry state.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>renderHookInEntry(callback: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    Function that calls the hook.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.seed</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Seed data for entry state. Passed through 
+<a href="#normalizeseed">normalizeSeed</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.setup</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>See 
+<a href="#renderinentry">renderInEntry</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>...options</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/1667113a2f6779e9b0020a629690eab530a1eb2e/entry_types/scrolled/package/spec/support/rendering.js#L49-L55'>
         <span>View source</span>
       </a>
     </div>
