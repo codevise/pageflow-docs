@@ -79,6 +79,42 @@
                         useSectionStructure
                       </a></li>
                     
+                      <li><a
+                        href='#useentrymetadata'
+                        class='regular pre-open'>
+                        useEntryMetadata
+                      </a></li>
+                    
+                      <li><a
+                        href='#usefilerights'
+                        class='regular pre-open'>
+                        useFileRights
+                      </a></li>
+                    
+                      <li><a
+                        href='#uselegalinfo'
+                        class='regular pre-open'>
+                        useLegalInfo
+                      </a></li>
+                    
+                      <li><a
+                        href='#usecredits'
+                        class='regular pre-open'>
+                        useCredits
+                      </a></li>
+                    
+                      <li><a
+                        href='#useshareproviders'
+                        class='regular pre-open'>
+                        useShareProviders
+                      </a></li>
+                    
+                      <li><a
+                        href='#useshareurl'
+                        class='regular pre-open'>
+                        useShareUrl
+                      </a></li>
+                    
                     </ul>
                   
                   
@@ -249,7 +285,7 @@
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/src/frontend/Image.js#L13-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/frontend/Image.js#L13-L32'>
         <span>View source</span>
       </a>
     </div>
@@ -424,7 +460,7 @@ imageFile <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/src/entryState/useFile.js#L26-L34'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/useFile.js#L26-L34'>
         <span>View source</span>
       </a>
     </div>
@@ -522,7 +558,7 @@ structure <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/src/entryState/structure.js#L48-L76'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/structure.js#L48-L76'>
         <span>View source</span>
       </a>
     </div>
@@ -642,7 +678,430 @@ section <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/src/entryState/structure.js#L109-L114'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/structure.js#L109-L114'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useentrymetadata'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useEntryMetadata()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the metadata of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useEntryMetadata()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> metaData = useEntryMetadata();
+metaData <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">shareProviders</span>: {<span class="hljs-attr">email</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">facebook</span>: <span class="hljs-literal">true</span>},
+    <span class="hljs-attr">share_url</span>: <span class="hljs-string">'http://test.host/test'</span>,
+    <span class="hljs-attr">credits</span>: <span class="hljs-string">'Credits: Pageflow'</span>
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/metadata.js#L20-L26'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usefilerights'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useFileRights()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a string (comma-separated list) of copyrights of
+all images used in the entry.
+If none of the images has a rights attribute configured,
+it falls back to the default file rights of the entry's account,
+otherwise returns an empty string</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useFileRights()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> fileRights = useFileRights();
+fileRights <span class="hljs-comment">// =&gt; "author of image 1, author of image 2"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/legalInfo.js#L18-L30'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='uselegalinfo'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useLegalInfo()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the legal info of the entry.
+Each legal info is separated into label and url to use in links.
+Both label and url can be blank, depending on the configuration.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useLegalInfo()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> legalInfo = useLegalInfo();
+legalInfo <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">imprint</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    },
+    <span class="hljs-attr">copyright</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    },
+    <span class="hljs-attr">privacy</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    }
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/legalInfo.js#L56-L60'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usecredits'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useCredits()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns the credits string (rich text) of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useCredits()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> credits = useCredits();
+credits <span class="hljs-comment">// =&gt; "Credits: &lt;a href="http://pageflow.com"&gt;pageflow.com&lt;/a&gt;"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/legalInfo.js#L70-L79'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useshareproviders'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useShareProviders()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a list of attributes (icon, name and url) of all configured share providers of the entry.
+The url provides a %{url} placeholder where the link can be inserted.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useShareProviders()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> shareProviders = useShareProviders();
+shareProviders <span class="hljs-comment">// =&gt;</span>
+  [
+    {
+      <span class="hljs-attr">icon</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FacebookSVGIcon</span> /&gt;</span>,
+      name: 'Facebook',
+      url: http://www.facebook.com/sharer/sharer.php?u=%{url}
+    },
+    {
+      icon: <span class="hljs-tag">&lt;<span class="hljs-name">TwitterSVGIcon</span> /&gt;</span>,
+      name: 'Twitter',
+      url: https://twitter.com/intent/tweet?url=%{url}
+    }
+  ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/sharing.js#L34-L84'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useshareurl'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useShareUrl()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns the share url of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useShareUrl()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> shareUrl = useShareUrl();
+shareUrl <span class="hljs-comment">// =&gt; "http://test.host/test"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/src/entryState/sharing.js#L100-L109'>
         <span>View source</span>
       </a>
     </div>
@@ -769,6 +1228,51 @@ side JBuilder templates.</p>
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.prettyUrl</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>The entry's url (Default share url).
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.shareUrlTemplates</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Mapping of share provider names to sharing urls.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.defaultFileRights</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>Default file rights of entry's account.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.legalInfo</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>imprint, copyright and privacy information of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.entry</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.imageFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
   </td>
   <td class='break-word'><span>Array of objects with image file attributes of entry.
@@ -846,7 +1350,7 @@ side JBuilder templates.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/spec/support/normalizeSeed.js#L13-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/spec/support/normalizeSeed.js#L18-L65'>
         <span>View source</span>
       </a>
     </div>
@@ -981,7 +1485,7 @@ is passed as a second parameter.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/spec/support/rendering.js#L28-L34'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/spec/support/rendering.js#L28-L34'>
         <span>View source</span>
       </a>
     </div>
@@ -1111,7 +1615,7 @@ the entry state.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/98ce307f32b07d2af0c688f7f5a34b0167b30481/entry_types/scrolled/package/spec/support/rendering.js#L49-L55'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/6d061a4ea7b1b98c95a62c5fa7aa1715add790cb/entry_types/scrolled/package/spec/support/rendering.js#L49-L55'>
         <span>View source</span>
       </a>
     </div>
