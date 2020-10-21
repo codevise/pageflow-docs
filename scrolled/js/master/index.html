@@ -526,7 +526,7 @@ frontend.contentElementTypes.register(<span class="hljs-string">'inlineImage'</s
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L29-L31'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L29-L31'>
         <span>View source</span>
       </a>
     </div>
@@ -548,7 +548,7 @@ frontend.contentElementTypes.register(<span class="hljs-string">'inlineImage'</s
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L5-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L5-L40'>
         <span>View source</span>
       </a>
     </div>
@@ -835,7 +835,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L56-L58'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L56-L58'>
         <span>View source</span>
       </a>
     </div>
@@ -857,7 +857,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L7-L96'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L7-L96'>
         <span>View source</span>
       </a>
     </div>
@@ -926,7 +926,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>&lt;AudioPlayer id posterId? defaultTextTrackFileId? position? isPrepared? /&gt;</span>
+            <span class='code strong strong truncate'>&lt;AudioPlayer audioFile posterId? defaultTextTrackFileId? position? isPrepared? props /&gt;</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -937,7 +937,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
   <p>Render audio file in MediaPlayer.</p>
 
   
-    <div class='pre p1 fill-light mt0'>&lt;AudioPlayer id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> posterId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? position: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? isPrepared: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? /&gt;</div>
+    <div class='pre p1 fill-light mt0'>&lt;AudioPlayer audioFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> posterId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? position: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? isPrepared: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? props: ...any /&gt;</div>
   
   
   
@@ -967,9 +967,11 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
           <tbody class='mt1'>
             
               <tr>
-  <td class='break-word'><span class='code bold'>id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>audioFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
   </td>
-  <td class='break-word'><span>Perma id of the audio file.
+  <td class='break-word'><span>Audio file obtained via 
+<code>useFile</code>
+.
 </span></td>
 </tr>
 
@@ -1011,6 +1013,14 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
 
             
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
           </tbody>
         </table>
       </div>
@@ -1035,7 +1045,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/AudioPlayer/index.js#L23-L54'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/AudioPlayer/index.js#L23-L53'>
         <span>View source</span>
       </a>
     </div>
@@ -1049,7 +1059,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>&lt;Image id variant? structuredData? /&gt;</span>
+            <span class='code strong strong truncate'>&lt;Image imageFile variant? structuredData? props /&gt;</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1060,7 +1070,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
   <p>Render an image file.</p>
 
   
-    <div class='pre p1 fill-light mt0'>&lt;Image id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> variant: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? structuredData: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? /&gt;</div>
+    <div class='pre p1 fill-light mt0'>&lt;Image imageFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> variant: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>? structuredData: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? props: ...any /&gt;</div>
   
   
   
@@ -1090,16 +1100,18 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
           <tbody class='mt1'>
             
               <tr>
-  <td class='break-word'><span class='code bold'>id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>imageFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
   </td>
-  <td class='break-word'><span>Perma id of the image file.
+  <td class='break-word'><span>Image file obtained via 
+<code>useFile</code>
+.
 </span></td>
 </tr>
 
 
             
               <tr>
-  <td class='break-word'><span class='code bold'>variant</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  <td class='break-word'><span class='code bold'>variant</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span>Paperclip style to use. Defaults to large.
 </span></td>
@@ -1112,6 +1124,14 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
   </td>
   <td class='break-word'><span>Whether to render a JSON+LD script tag.
 </span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
 </tr>
 
 
@@ -1140,7 +1160,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/Image.js#L16-L29'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/Image.js#L15-L26'>
         <span>View source</span>
       </a>
     </div>
@@ -1244,7 +1264,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/Figure.js#L17-L35'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/Figure.js#L17-L35'>
         <span>View source</span>
       </a>
     </div>
@@ -1357,7 +1377,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/Text.js#L14-L18'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/Text.js#L14-L18'>
         <span>View source</span>
       </a>
     </div>
@@ -1371,7 +1391,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>&lt;VideoPlayer id posterId? defaultTextTrackFileId? isPrepared? fit? position? /&gt;</span>
+            <span class='code strong strong truncate'>&lt;VideoPlayer videoFile posterId? defaultTextTrackFileId? isPrepared? fit? position? props /&gt;</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1382,7 +1402,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
   <p>Render video file in MediaPlayer.</p>
 
   
-    <div class='pre p1 fill-light mt0'>&lt;VideoPlayer id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> posterId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? isPrepared: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? fit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? position: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? /&gt;</div>
+    <div class='pre p1 fill-light mt0'>&lt;VideoPlayer videoFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> posterId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? isPrepared: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? fit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? position: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? props: ...any /&gt;</div>
   
   
   
@@ -1412,9 +1432,11 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
           <tbody class='mt1'>
             
               <tr>
-  <td class='break-word'><span class='code bold'>id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>videoFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
   </td>
-  <td class='break-word'><span>Perma id of the video file.
+  <td class='break-word'><span>Video file obtained via 
+<code>useFile</code>
+.
 </span></td>
 </tr>
 
@@ -1468,6 +1490,14 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
 
             
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
           </tbody>
         </table>
       </div>
@@ -1492,7 +1522,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/VideoPlayer/index.js#L25-L62'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/VideoPlayer/index.js#L25-L62'>
         <span>View source</span>
       </a>
     </div>
@@ -1617,7 +1647,7 @@ determine whether to use opaque background.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/ViewportDependentPillarBoxes.js#L20-L49'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/ViewportDependentPillarBoxes.js#L20-L49'>
         <span>View source</span>
       </a>
     </div>
@@ -1739,7 +1769,7 @@ information when the content element is selected.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/useContentElementEditorState.js#L19-L21'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/useContentElementEditorState.js#L19-L21'>
         <span>View source</span>
       </a>
     </div>
@@ -1845,7 +1875,7 @@ viewport.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/useContentElementLifecycle.js#L56-L66'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/useContentElementLifecycle.js#L56-L66'>
         <span>View source</span>
       </a>
     </div>
@@ -1912,7 +1942,7 @@ sections or in sections with card appearance.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/backgroundColor.js#L35-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/backgroundColor.js#L35-L37'>
         <span>View source</span>
       </a>
     </div>
@@ -2035,7 +2065,7 @@ imageFile <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/useFile.js#L29-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/useFile.js#L29-L37'>
         <span>View source</span>
       </a>
     </div>
@@ -2166,7 +2196,7 @@ t(<span class="hljs-string">'pageflow_scrolled.inline_editing.some.key'</span>)<
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/i18n.js#L48-L56'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/i18n.js#L48-L56'>
         <span>View source</span>
       </a>
     </div>
@@ -2237,7 +2267,7 @@ metaData <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/metadata.js#L21-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/metadata.js#L21-L27'>
         <span>View source</span>
       </a>
     </div>
@@ -2305,7 +2335,7 @@ fileRights <span class="hljs-comment">// =&gt; "author of image 1, author of ima
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/legalInfo.js#L18-L33'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/legalInfo.js#L18-L33'>
         <span>View source</span>
       </a>
     </div>
@@ -2385,7 +2415,7 @@ legalInfo <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/legalInfo.js#L59-L63'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/legalInfo.js#L59-L63'>
         <span>View source</span>
       </a>
     </div>
@@ -2449,7 +2479,7 @@ credits <span class="hljs-comment">// =&gt; "Credits: &lt;a href="http://pagef
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/legalInfo.js#L73-L82'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/legalInfo.js#L73-L82'>
         <span>View source</span>
       </a>
     </div>
@@ -2563,7 +2593,7 @@ shareProviders <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/sharing.js#L34-L84'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/sharing.js#L34-L84'>
         <span>View source</span>
       </a>
     </div>
@@ -2627,7 +2657,7 @@ shareUrl <span class="hljs-comment">// =&gt; "http://test.host/test"</span></pre
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/sharing.js#L111-L120'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/sharing.js#L111-L120'>
         <span>View source</span>
       </a>
     </div>
@@ -2920,7 +2950,7 @@ side JBuilder templates.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/spec/support/normalizeSeed.js#L22-L103'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/spec/support/normalizeSeed.js#L22-L103'>
         <span>View source</span>
       </a>
     </div>
@@ -3077,7 +3107,7 @@ is passed as a second parameter.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/spec/support/rendering.js#L45-L81'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/spec/support/rendering.js#L45-L81'>
         <span>View source</span>
       </a>
     </div>
@@ -3215,7 +3245,7 @@ the entry state.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/spec/support/rendering.js#L96-L102'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/spec/support/rendering.js#L96-L102'>
         <span>View source</span>
       </a>
     </div>
@@ -3374,7 +3404,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/spec/support/stories.js#L97-L113'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/spec/support/stories.js#L97-L113'>
         <span>View source</span>
       </a>
     </div>
@@ -3513,7 +3543,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/spec/support/stories.js#L49-L70'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/spec/support/stories.js#L49-L70'>
         <span>View source</span>
       </a>
     </div>
@@ -3599,7 +3629,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/PlayerControls/WaveformPlayerControls/Wavesurfer.js#L25-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/PlayerControls/WaveformPlayerControls/Wavesurfer.js#L25-L27'>
         <span>View source</span>
       </a>
     </div>
@@ -3685,7 +3715,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/frontend/PlayerControls/WaveformPlayerControls/Wavesurfer.js#L32-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/frontend/PlayerControls/WaveformPlayerControls/Wavesurfer.js#L32-L40'>
         <span>View source</span>
       </a>
     </div>
@@ -3783,7 +3813,7 @@ structure <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/structure.js#L48-L76'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/structure.js#L48-L76'>
         <span>View source</span>
       </a>
     </div>
@@ -3903,7 +3933,7 @@ section <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/structure.js#L109-L114'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/structure.js#L109-L114'>
         <span>View source</span>
       </a>
     </div>
@@ -3977,7 +4007,7 @@ theme <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8ea3b7d3681cb4b7847b565f10431308838d991d/entry_types/scrolled/package/src/entryState/theme.js#L21-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/355d8321e4bf09446da709e48fcaabfaea176b19/entry_types/scrolled/package/src/entryState/theme.js#L21-L25'>
         <span>View source</span>
       </a>
     </div>
