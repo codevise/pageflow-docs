@@ -41,6 +41,12 @@
                         frontend.contentElementTypes
                       </a></li>
                     
+                      <li><a
+                        href='#frontend_widgettypes'
+                        class='regular pre-open'>
+                        frontend.widgetTypes
+                      </a></li>
+                    
                     </ul>
                   
                   
@@ -537,7 +543,7 @@ frontend.contentElementTypes.register(<span class="hljs-string">'inlineImage'</s
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L36-L38'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L36-L38'>
         <span>View source</span>
       </a>
     </div>
@@ -559,7 +565,186 @@ frontend.contentElementTypes.register(<span class="hljs-string">'inlineImage'</s
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L5-L68'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L5-L68'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='frontend_widgettypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>frontend.widgetTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register new types of widgets.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>frontend.widgetTypes</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='frontend_widgettypesregister'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>register(typeName, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register a new type of widget.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>register(typeName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>typeName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name of the content element type.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.component</span> <code class='quiet'>React.Component</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// frontend.js</span>
+
+<span class="hljs-keyword">import</span> {frontend} <span class="hljs-keyword">from</span> <span class="hljs-string">'pageflow-scrolled/frontend'</span>;
+<span class="hljs-keyword">import</span> {CustomNavigationBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'./CustomNavigationBar'</span>;
+
+frontend.contentElementTypes.register(<span class="hljs-string">'customNavigationBar'</span>, {
+  <span class="hljs-attr">component</span>: CustomNavigationBar
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/api/WidgetTypeRegistry.js#L29-L35'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/api/WidgetTypeRegistry.js#L5-L44'>
         <span>View source</span>
       </a>
     </div>
@@ -846,7 +1031,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L56-L58'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L56-L58'>
         <span>View source</span>
       </a>
     </div>
@@ -868,7 +1053,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L7-L79'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L7-L79'>
         <span>View source</span>
       </a>
     </div>
@@ -1055,7 +1240,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/AudioPlayer/index.js#L20-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/AudioPlayer/index.js#L20-L47'>
         <span>View source</span>
       </a>
     </div>
@@ -1159,7 +1344,7 @@ editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</spa
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/Figure.js#L17-L35'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/Figure.js#L17-L35'>
         <span>View source</span>
       </a>
     </div>
@@ -1277,7 +1462,7 @@ exceed the heigth of the viewport by setting an appropriate
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/FitViewport.js#L31-L55'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/FitViewport.js#L31-L55'>
         <span>View source</span>
       </a>
     </div>
@@ -1401,7 +1586,7 @@ exceed the heigth of the viewport by setting an appropriate
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/Image.js#L16-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/Image.js#L16-L27'>
         <span>View source</span>
       </a>
     </div>
@@ -1518,7 +1703,7 @@ exceed the heigth of the viewport by setting an appropriate
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/Text.js#L15-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/Text.js#L15-L19'>
         <span>View source</span>
       </a>
     </div>
@@ -1624,7 +1809,7 @@ consent for passed provider.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptIn.js#L21-L52'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptIn.js#L21-L52'>
         <span>View source</span>
       </a>
     </div>
@@ -1739,7 +1924,7 @@ tooltip when content element uses full width.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptOutInfo.js#L26-L55'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptOutInfo.js#L26-L55'>
         <span>View source</span>
       </a>
     </div>
@@ -1883,7 +2068,7 @@ tooltip when content element uses full width.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/VideoPlayer/index.js#L20-L48'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/VideoPlayer/index.js#L20-L48'>
         <span>View source</span>
       </a>
     </div>
@@ -2053,7 +2238,7 @@ should pause the element.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/useAudioFocus.js#L28-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/useAudioFocus.js#L28-L44'>
         <span>View source</span>
       </a>
     </div>
@@ -2120,7 +2305,7 @@ information when the content element is selected.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/useContentElementEditorState.js#L19-L21'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/useContentElementEditorState.js#L19-L21'>
         <span>View source</span>
       </a>
     </div>
@@ -2231,7 +2416,7 @@ viewport.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/useContentElementLifecycle.js#L60-L70'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/useContentElementLifecycle.js#L60-L70'>
         <span>View source</span>
       </a>
     </div>
@@ -2295,7 +2480,7 @@ credits <span class="hljs-comment">// =&gt; "Credits: &lt;a href="http://pagef
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/legalInfo.js#L65-L74'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/legalInfo.js#L65-L74'>
         <span>View source</span>
       </a>
     </div>
@@ -2362,7 +2547,7 @@ sections or in sections with card appearance.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/backgroundColor.js#L35-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/backgroundColor.js#L35-L37'>
         <span>View source</span>
       </a>
     </div>
@@ -2433,7 +2618,7 @@ metaData <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/metadata.js#L20-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/metadata.js#L20-L26'>
         <span>View source</span>
       </a>
     </div>
@@ -2556,7 +2741,7 @@ imageFile <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/useFile.js#L27-L35'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/useFile.js#L27-L35'>
         <span>View source</span>
       </a>
     </div>
@@ -2624,7 +2809,7 @@ fileRights <span class="hljs-comment">// =&gt; "author of image 1, author of ima
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/legalInfo.js#L16-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/legalInfo.js#L16-L25'>
         <span>View source</span>
       </a>
     </div>
@@ -2755,7 +2940,7 @@ t(<span class="hljs-string">'pageflow_scrolled.inline_editing.some.key'</span>)<
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/i18n.js#L48-L56'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/i18n.js#L48-L56'>
         <span>View source</span>
       </a>
     </div>
@@ -2820,7 +3005,7 @@ thumbnails.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/useScrollPositionLifecycle.js#L25-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/useScrollPositionLifecycle.js#L25-L27'>
         <span>View source</span>
       </a>
     </div>
@@ -2900,7 +3085,7 @@ legalInfo <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/legalInfo.js#L51-L55'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/legalInfo.js#L51-L55'>
         <span>View source</span>
       </a>
     </div>
@@ -2957,7 +3142,7 @@ legalInfo <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/useMediaMuted.js#L27-L29'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/useMediaMuted.js#L27-L29'>
         <span>View source</span>
       </a>
     </div>
@@ -3015,7 +3200,7 @@ portrait.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/frontend/usePortraitOrientation.js#L7-L9'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/frontend/usePortraitOrientation.js#L7-L9'>
         <span>View source</span>
       </a>
     </div>
@@ -3129,7 +3314,7 @@ shareProviders <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/sharing.js#L34-L83'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/sharing.js#L34-L83'>
         <span>View source</span>
       </a>
     </div>
@@ -3193,7 +3378,7 @@ shareUrl <span class="hljs-comment">// =&gt; "http://test.host/test"</span></pre
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/sharing.js#L110-L119'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/sharing.js#L110-L119'>
         <span>View source</span>
       </a>
     </div>
@@ -3267,7 +3452,7 @@ theme <span class="hljs-comment">// =&gt;</span>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/src/entryState/theme.js#L21-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/src/entryState/theme.js#L21-L25'>
         <span>View source</span>
       </a>
     </div>
@@ -3511,6 +3696,15 @@ side JBuilder templates.</p>
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.widgets</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with widget attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.fileUrlTemplates</span> <code class='quiet'>any</code>
   </td>
   <td class='break-word'><span></span></td>
@@ -3560,7 +3754,7 @@ side JBuilder templates.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/spec/support/normalizeSeed.js#L22-L103'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/spec/support/normalizeSeed.js#L23-L106'>
         <span>View source</span>
       </a>
     </div>
@@ -3727,7 +3921,7 @@ is passed as a second parameter.
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/spec/support/rendering.js#L46-L84'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/spec/support/rendering.js#L46-L84'>
         <span>View source</span>
       </a>
     </div>
@@ -3865,7 +4059,7 @@ the entry state.</p>
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/spec/support/rendering.js#L99-L105'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/spec/support/rendering.js#L99-L105'>
         <span>View source</span>
       </a>
     </div>
@@ -4024,7 +4218,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/spec/support/stories.js#L111-L127'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/spec/support/stories.js#L111-L127'>
         <span>View source</span>
       </a>
     </div>
@@ -4163,7 +4357,7 @@ storiesOfContentElement(<span class="hljs-built_in">module</span>, {
 
   
     <div class="pt1 right-align">
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/8117edd085943f6e5b580859ac3fea2146dddc28/entry_types/scrolled/package/spec/support/stories.js#L55-L84'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/c9a0cebb995a4f5a1885e652caffba6968d32e87/entry_types/scrolled/package/spec/support/stories.js#L55-L84'>
         <span>View source</span>
       </a>
     </div>
