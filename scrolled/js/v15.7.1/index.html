@@ -1,0 +1,4765 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <title>pageflow-scrolled  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+  <link href='assets/favicon.ico' rel='icon' >
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>pageflow-scrolled</h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#frontend-api'
+                  class="h5 bold black caps">
+                  Frontend API
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#frontend_contentelementtypes'
+                        class='regular pre-open'>
+                        frontend.contentElementTypes
+                      </a></li>
+                    
+                      <li><a
+                        href='#frontend_widgettypes'
+                        class='regular pre-open'>
+                        frontend.widgetTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#editor-api'
+                  class="h5 bold black caps">
+                  Editor API
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#editor_contentelementtypes'
+                        class='regular pre-open'>
+                        editor.contentElementTypes
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#components'
+                  class="h5 bold black caps">
+                  Components
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#audioplayer'
+                        class='regular pre-open'>
+                        AudioPlayer
+                      </a></li>
+                    
+                      <li><a
+                        href='#contentelementbox'
+                        class='regular pre-open'>
+                        ContentElementBox
+                      </a></li>
+                    
+                      <li><a
+                        href='#figure'
+                        class='regular pre-open'>
+                        Figure
+                      </a></li>
+                    
+                      <li><a
+                        href='#fitviewport'
+                        class='regular pre-open'>
+                        FitViewport
+                      </a></li>
+                    
+                      <li><a
+                        href='#image'
+                        class='regular pre-open'>
+                        Image
+                      </a></li>
+                    
+                      <li><a
+                        href='#text'
+                        class='regular pre-open'>
+                        Text
+                      </a></li>
+                    
+                      <li><a
+                        href='#themeicon'
+                        class='regular pre-open'>
+                        ThemeIcon
+                      </a></li>
+                    
+                      <li><a
+                        href='#thirdpartyoptin'
+                        class='regular pre-open'>
+                        ThirdPartyOptIn
+                      </a></li>
+                    
+                      <li><a
+                        href='#thirdpartyoptoutinfo'
+                        class='regular pre-open'>
+                        ThirdPartyOptOutInfo
+                      </a></li>
+                    
+                      <li><a
+                        href='#videoplayer'
+                        class='regular pre-open'>
+                        VideoPlayer
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#hooks'
+                  class="h5 bold black caps">
+                  Hooks
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#useadditionalseeddata'
+                        class='regular pre-open'>
+                        useAdditionalSeedData
+                      </a></li>
+                    
+                      <li><a
+                        href='#useaudiofocus'
+                        class='regular pre-open'>
+                        useAudioFocus
+                      </a></li>
+                    
+                      <li><a
+                        href='#usecontentelementeditorstate'
+                        class='regular pre-open'>
+                        useContentElementEditorState
+                      </a></li>
+                    
+                      <li><a
+                        href='#usecontentelementlifecycle'
+                        class='regular pre-open'>
+                        useContentElementLifecycle
+                      </a></li>
+                    
+                      <li><a
+                        href='#usecurrentchapter'
+                        class='regular pre-open'>
+                        useCurrentChapter
+                      </a></li>
+                    
+                      <li><a
+                        href='#usecredits'
+                        class='regular pre-open'>
+                        useCredits
+                      </a></li>
+                    
+                      <li><a
+                        href='#usedarkbackground'
+                        class='regular pre-open'>
+                        useDarkBackground
+                      </a></li>
+                    
+                      <li><a
+                        href='#useentrymetadata'
+                        class='regular pre-open'>
+                        useEntryMetadata
+                      </a></li>
+                    
+                      <li><a
+                        href='#usefile'
+                        class='regular pre-open'>
+                        useFile
+                      </a></li>
+                    
+                      <li><a
+                        href='#usefilerights'
+                        class='regular pre-open'>
+                        useFileRights
+                      </a></li>
+                    
+                      <li><a
+                        href='#usei18n'
+                        class='regular pre-open'>
+                        useI18n
+                      </a></li>
+                    
+                      <li><a
+                        href='#useisstaticpreview'
+                        class='regular pre-open'>
+                        useIsStaticPreview
+                      </a></li>
+                    
+                      <li><a
+                        href='#uselegalinfo'
+                        class='regular pre-open'>
+                        useLegalInfo
+                      </a></li>
+                    
+                      <li><a
+                        href='#usemediamuted'
+                        class='regular pre-open'>
+                        useMediaMuted
+                      </a></li>
+                    
+                      <li><a
+                        href='#useportraitorientation'
+                        class='regular pre-open'>
+                        usePortraitOrientation
+                      </a></li>
+                    
+                      <li><a
+                        href='#useshareproviders'
+                        class='regular pre-open'>
+                        useShareProviders
+                      </a></li>
+                    
+                      <li><a
+                        href='#useshareurl'
+                        class='regular pre-open'>
+                        useShareUrl
+                      </a></li>
+                    
+                      <li><a
+                        href='#usetheme'
+                        class='regular pre-open'>
+                        useTheme
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#spec-support'
+                  class="h5 bold black caps">
+                  Spec Support
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#normalizeseed'
+                        class='regular pre-open'>
+                        normalizeSeed
+                      </a></li>
+                    
+                      <li><a
+                        href='#renderinentry'
+                        class='regular pre-open'>
+                        renderInEntry
+                      </a></li>
+                    
+                      <li><a
+                        href='#renderhookinentry'
+                        class='regular pre-open'>
+                        renderHookInEntry
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#storybook-support'
+                  class="h5 bold black caps">
+                  Storybook Support
+                </a>
+                
+                <div>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    
+                      <li><a
+                        href='#filepermaid'
+                        class='regular pre-open'>
+                        filePermaId
+                      </a></li>
+                    
+                      <li><a
+                        href='#storiesofcontentelement'
+                        class='regular pre-open'>
+                        storiesOfContentElement
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='frontend-api'>
+      Frontend API
+    </h3>
+    
+  </div>
+  
+
+  <p>Main entry point of frontend API to register new content element types.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='frontend_contentelementtypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>frontend.contentElementTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register new types of content elements.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>frontend.contentElementTypes</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='frontend_contentelementtypesregister'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>register(typeName, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register a new type of content element.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>register(typeName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>typeName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name of the content element type.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.component</span> <code class='quiet'>React.Component</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.supportsWrappingAroundFloats</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>  In sections with centered layout, content elements can be
+floated to the left or right. By default all content
+elements are cleared to position them below floating
+elements. If a content element renders mainly text that
+can wrap around floating elements, clearing can be
+disabled via this option.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// frontend.js</span>
+
+<span class="hljs-keyword">import</span> {frontend} <span class="hljs-keyword">from</span> <span class="hljs-string">'pageflow-scrolled/frontend'</span>;
+<span class="hljs-keyword">import</span> {InlineImage} <span class="hljs-keyword">from</span> <span class="hljs-string">'./InlineImage'</span>;
+
+frontend.contentElementTypes.register(<span class="hljs-string">'inlineImage'</span>, {
+  <span class="hljs-attr">component</span>: InlineImage
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L36-L38'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/api/ContentElementTypeRegistry.js#L5-L68'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='frontend_widgettypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>frontend.widgetTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register new types of widgets.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>frontend.widgetTypes</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='frontend_widgettypesregister'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>register(typeName, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register a new type of widget.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>register(typeName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>typeName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name of the content element type.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.component</span> <code class='quiet'>React.Component</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// frontend.js</span>
+
+<span class="hljs-keyword">import</span> {frontend} <span class="hljs-keyword">from</span> <span class="hljs-string">'pageflow-scrolled/frontend'</span>;
+<span class="hljs-keyword">import</span> {CustomNavigationBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'./CustomNavigationBar'</span>;
+
+frontend.contentElementTypes.register(<span class="hljs-string">'customNavigationBar'</span>, {
+  <span class="hljs-attr">component</span>: CustomNavigationBar
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/api/WidgetTypeRegistry.js#L29-L35'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/api/WidgetTypeRegistry.js#L5-L44'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='editor-api'>
+      Editor API
+    </h3>
+    
+  </div>
+  
+
+  <p>Main entry point of editor API to register new content element types.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='editor_contentelementtypes'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>editor.contentElementTypes</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Integrate new content types into the editor.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>editor.contentElementTypes</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='editor_contentelementtypesregister'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>register(typeName, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Register a new type of content element in the editor.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>register(typeName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>typeName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name of the content element type.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.configurationEditor</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>  Function that is evaluated in the context of a
+
+<code>ConfigurationEditorView</code>
+ (see 
+<code>pageflow/ui</code>
+) which will
+be used to edit the configuration of content elements of
+this type. Receives an options object with an 
+<code>entry</code>
+
+property containing the entry model.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.defaultConfig</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>  Object that is set as initial config for the content element.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.split</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>  Function that receives configuration attributes and a split point
+and needs to return a two element array of configuration attributes
+objects representing the content elements that arise from splitting
+a content element with the given configuration at the specified
+split point. Called when inserting content elements at custom split
+points.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.merge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>  Function that receives two configuration attributes objects and
+needs to return a single merged configuration. If provided, this
+will function will be called whenever two content elements of this
+type become adjacent because a common neighbor has been deleted.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.supportedPositions</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>?</code>
+  </td>
+  <td class='break-word'><span>  Pass array containing a subset of the positions 
+<code>left</code>
+, 
+<code>right</code>
+,
+
+<code>sticky</code>
+, 
+<code>full</code>
+ and 
+<code>inline</code>
+. When inserting a content element
+next to a 
+<code>sticky</code>
+, 
+<code>left</code>
+ or 
+<code>right</code>
+ positioned sibling, only
+types supporting this position will be offered in the type
+selection dialog. By default all positions are supported.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// editor.js</span>
+editor.contentElementTypes.register(<span class="hljs-string">'inlineImage'</span>, {
+  configurationEditor() {
+    <span class="hljs-keyword">this</span>.tab(<span class="hljs-string">'general'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.input(<span class="hljs-string">'caption'</span>, TextInputView);
+    });
+  }
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L57-L59'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/editor/api/ContentElementTypeRegistry.js#L7-L113'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='components'>
+      Components
+    </h3>
+    
+  </div>
+  
+
+  <p>React components for building content elements.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='audioplayer'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;AudioPlayer audioFile posterImageFile? defaultTextTrackFileId? load? props /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render audio file in MediaPlayer.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;AudioPlayer audioFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> posterImageFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? load: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>? props: ...any /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>audioFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Audio file obtained via 
+<code>useFile</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>posterImageFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Poster image file obtained via 
+<code>useFile</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>defaultTextTrackFileId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Perma id of default text track file.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>load</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span>Control lazy loading. 
+<code>"auto"</code>
+ (default), 
+<code>"poster"</code>
+ or 
+<code>"none"</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/AudioPlayer/index.js#L20-L47'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='contentelementbox'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;ContentElementBox children /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Wrap content element that render a visible box in this component to
+apply theme specific styles like rounded corners.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;ContentElementBox children: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>children</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Content of box.
+</span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/ContentElementBox.js#L12-L18'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='figure'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;Figure children text caption /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a figure with a caption text attached.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;Figure children: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> text: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> caption: any /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>children</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Content of figure.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>text</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>The text to be displayed.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>caption</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/Figure.js#L17-L35'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='fitviewport'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;FitViewport file? aspectRatio? opaque? children /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a div with the given aspect ratio which does not
+exceed the heigth of the viewport by setting an appropriate
+<code>max-width</code> on the container.</p>
+<p>Wrap content in <code>FitViewport.Content</code> element:</p>
+   <FitViewport aspectRatio={0.5625}>
+     <FitViewport.Content>
+        <div style={{height: '100%'}}>
+           This div will have the specified aspec ratio
+           while not exceeding the height of the viewport
+        </div>
+     </FitViewport.Content>
+     <div>
+       This div will have the same width as the content.
+     </div>
+   </FitViewport>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;FitViewport file: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>? aspectRatio: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? opaque: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>? children: any /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>file</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Use width/height of file to calculate aspect ratio.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>aspectRatio</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Aspect ratio of div.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>opaque</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Render black background behind content.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>children</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/FitViewport.js#L33-L58'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='image'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;Image imageFile variant? load? structuredData? props /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render an image file.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;Image imageFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> variant: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>? load: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? structuredData: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>? props: ...any /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>imageFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Image file obtained via 
+<code>useFile</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>variant</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span>Paperclip style to use. Defaults to large.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>load</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>Whether to load the image. Can be used for lazy loading.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>structuredData</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>Whether to render a JSON+LD script tag.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/Image.js#L16-L27'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='text'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;Text inline? scaleCategory children /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render some text using the default typography scale.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;Text inline: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>? scaleCategory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> children: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>inline</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span>Render a span instread of a div.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>scaleCategory</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>  One of the styles 
+<code>'heading-lg'</code>
+, 
+<code>'heading-md'</code>
+, 
+<code>'heading-sm'</code>
+,
+
+<code>'heading-xs'</code>
+, 
+<code>'body'</code>
+, 
+<code>'caption'</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>children</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Nodes to render with specified typography.
+</span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/Text.js#L16-L20'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='themeicon'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;ThemeIcon name /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render an SVG icon that can be customized in themes.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;ThemeIcon name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>name</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>Either: information, muted, share or unmuted.
+</span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/ThemeIcon.js#L23-L42'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='thirdpartyoptin'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ThirdPartyOptIn</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render opt in prompt instead of children if third party consent
+cookie has been configured in theme options and user has not given
+consent for passed provider.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>ThirdPartyOptIn</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.providerName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>  Only render children if user has given consent for this provider.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.children</span> <code class='quiet'>React.ReactElement</code>
+  </td>
+  <td class='break-word'><span>  Children to conditionally render.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptIn.js#L21-L52'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='thirdpartyoptoutinfo'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ThirdPartyOptOutInfo</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Display info tooltip with a link to opt out of third party
+embeds. Opt out url needs to be configured in theme options.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>ThirdPartyOptOutInfo</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.providerName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>  Only display if user has given consent for this provider.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.contentElementPosition</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>  Position setting of parent content element. Used to correctly place
+tooltip when content element uses full width.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>hide</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+	      Temporarily hide the tooltip, e.g. while the embed is playing
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/thirdPartyConsent/OptOutInfo.js#L26-L55'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='videoplayer'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>&lt;VideoPlayer videoFile posterImageFile? defaultTextTrackFileId? load? fit? props /&gt;</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render video file in MediaPlayer.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>&lt;VideoPlayer videoFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> posterImageFile: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? defaultTextTrackFileId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>? load: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>? fit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>? props: ...any /&gt;</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Props</div>
+    <div class='prose'>
+      <div class='space-bottom0'>
+        <table class='mt1 mb2 fixed-table h5 col-12'>
+          <colgroup>
+            <col width='30%' />
+            <col width='70%' />
+          </colgroup>
+          <thead>
+            <tr class='bold fill-light'>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class='mt1'>
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>videoFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>Video file obtained via 
+<code>useFile</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>posterImageFile</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Poster image file obtained via 
+<code>useFile</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>defaultTextTrackFileId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Perma id of default text track file.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>load</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span>Control lazy loading. 
+<code>"auto"</code>
+ (default), 
+<code>"poster"</code>
+ or 
+<code>"none"</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>fit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span><code>"contain"</code>
+ (default) or 
+<code>"cover"</code>
+.
+</span></td>
+</tr>
+
+
+            
+              <tr>
+  <td class='break-word'><span class='code bold'>...</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/VideoPlayer/index.js#L20-L48'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='hooks'>
+      Hooks
+    </h3>
+    
+  </div>
+  
+
+  <p>React hooks to obtain entry data.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='useadditionalseeddata'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useAdditionalSeedData(name)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns data generated by a Ruby lambda registered server
+side via <code>config.additional_frontend_seed_data.register</code>.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useAdditionalSeedData(name: any)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> data = useAdditionalSeedData(<span class="hljs-string">'someSeed'</span>);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/additionalSeedData.js#L11-L19'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useaudiofocus'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useAudioFocus(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Prevent parallel playback of multiple media elements.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useAudioFocus(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.key</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>Unique id used to identify the element.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.request</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  </td>
+  <td class='break-word'><span>Set to true to request audio focus.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.onLost</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
+  </td>
+  <td class='break-word'><span>  Callback that will be invoked if another element requests audio
+focus, thereby preempting your hold of audio focus. The callback
+should pause the element.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useAudioFocus.js#L28-L44'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usecontentelementeditorstate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useContentElementEditorState()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Use inside a content element component to determine whether the
+component is being rendered inside the editor iframe, and whether
+the content element is currently selected. This can be used to
+implement simple inline editing capabilities like displaying extra
+information when the content element is selected.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useContentElementEditorState()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> {isEditable, isSelected} = useContentElementEditorState();</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useContentElementEditorState.js#L19-L21'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usecontentelementlifecycle'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useContentElementLifecycle(options, onActivate, onDeactivate)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns an object containing information about the scroll position
+related lifecylce of the content element. Requires the <code>lifecycle</code>
+option to be set to true in the <code>frontend.contentElements.register</code>
+call for the content element's type.</p>
+<ul>
+<li>
+<p><code>shouldLoad</code> is true if the content element should start lazy
+load. Becomes true before <code>shouldPrepare</code>.</p>
+</li>
+<li>
+<p><code>shouldPrepare</code> is true if the content element is about to enter
+the viewport.</p>
+</li>
+<li>
+<p><code>isActive</code> is true if the content element is completely in the
+viewport.</p>
+</li>
+</ul>
+
+  
+    <div class='pre p1 fill-light mt0'>useContentElementLifecycle(options: any, onActivate: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, onDeactivate: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>onActivate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	      Invoked when content element has entered the viewport.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>onDeactivate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	      Invoked when content element has left the viewport.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> {isActive, shouldPrepare} = useContentElementLifecycle();</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useContentElementLifecycle.js#L60-L70'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usecurrentchapter'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useCurrentChapter()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns chapter containing the current scroll position.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useCurrentChapter()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> chapter = useCurrentChapter();
+chapter <span class="hljs-comment">// =&gt;</span>
+ {
+   <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
+   <span class="hljs-attr">permaId</span>: <span class="hljs-number">5</span>,
+   <span class="hljs-attr">title</span>: <span class="hljs-string">'Chapter 1'</span>,
+   <span class="hljs-attr">summary</span>: <span class="hljs-string">'An introductory chapter'</span>,
+   <span class="hljs-attr">chapterSlug</span>: <span class="hljs-string">'chapter-1'</span>
+ }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useCurrentChapter.js#L43-L45'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usecredits'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useCredits()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns the credits string (rich text) of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useCredits()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> credits = useCredits();
+credits <span class="hljs-comment">// =&gt; "Credits: &lt;a href="http://pageflow.com"&gt;pageflow.com&lt;/a&gt;"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/legalInfo.js#L65-L74'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usedarkbackground'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useDarkBackground()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Use to invert elements depending on whether they are rendered on a
+dark or light background to ensure correct display in inverted
+sections or in sections with card appearance.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useDarkBackground(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/backgroundColor.js#L35-L37'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useentrymetadata'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useEntryMetadata()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the metadata of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useEntryMetadata()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> metaData = useEntryMetadata();
+metaData <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">locale</span>: <span class="hljs-string">'en'</span>,
+    <span class="hljs-attr">shareProviders</span>: {<span class="hljs-attr">email</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">facebook</span>: <span class="hljs-literal">true</span>},
+    <span class="hljs-attr">share_url</span>: <span class="hljs-string">'http://test.host/test'</span>,
+    <span class="hljs-attr">credits</span>: <span class="hljs-string">'Credits: Pageflow'</span>
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/metadata.js#L20-L26'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usefile'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useFile(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Look up a file by its collection and perma id.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useFile(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.collectionName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+  </td>
+  <td class='break-word'><span>Collection name of file type to look for (in camel case).
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.permaId</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+  </td>
+  <td class='break-word'><span>Perma id of file look up
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> imageFile = useFile({<span class="hljs-attr">collectionName</span>: <span class="hljs-string">'imageFiles'</span>, <span class="hljs-attr">permaId</span>: <span class="hljs-number">5</span>});
+imageFile <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">102</span>,
+    <span class="hljs-attr">permaId</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-number">1000</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-number">500</span>,
+    <span class="hljs-attr">urls</span>: {
+      <span class="hljs-attr">large</span>: <span class="hljs-string">'https://...'</span>
+    },
+    <span class="hljs-attr">configuration</span>: {
+      <span class="hljs-attr">alt</span>: <span class="hljs-string">'...'</span>
+    }
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/useFile.js#L27-L35'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usefilerights'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useFileRights()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a string (comma-separated list) of copyrights of
+all images used in the entry.
+If none of the images has a rights attribute configured,
+it falls back to the default file rights of the entry's account,
+otherwise returns an empty string</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useFileRights()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> fileRights = useFileRights();
+fileRights <span class="hljs-comment">// =&gt; "author of image 1, author of image 2"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/legalInfo.js#L16-L25'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usei18n'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useI18n($0, options?, locale)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Use translations in frontend elements. Uses the configured locale
+of the current entry by default. Note that only translation keys
+from the <code>pageflow_scrolled.public</code> scope are universally
+available.</p>
+<p>to render translations for inline editing controls in the editor
+preview, you can pass <code>"ui"</code> as <code>locale</code> option and use
+translations from the <code>pageflow_scrolled.inline_editing</code> scope.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useI18n($0: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?, locale: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>$0.locale</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>locale</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;entry&quot;</code>)</code>
+	      Pass 
+<code>"ui"</code>
+ to use the locale of the editor interface instead.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> {t} = useI18n();
+t(<span class="hljs-string">'pageflow_scrolled.public.some.key'</span>)
+
+<span class="hljs-keyword">const</span> {t} = useI18n({<span class="hljs-attr">locale</span>: <span class="hljs-string">'ui'</span>});
+t(<span class="hljs-string">'pageflow_scrolled.inline_editing.some.key'</span>)</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/i18n.js#L48-L56'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useisstaticpreview'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useIsStaticPreview()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Use inside a content element component to determine whether the
+component is being rendered in a static preview, e.g. editor
+thumbnails.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useIsStaticPreview()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> isStaticPreview = useIsStaticPreview();</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useScrollPositionLifecycle.js#L25-L27'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='uselegalinfo'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useLegalInfo()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a nested data structure representing the legal info of the entry.
+Each legal info is separated into label and url to use in links.
+Both label and url can be blank, depending on the configuration.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useLegalInfo()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> legalInfo = useLegalInfo();
+legalInfo <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">imprint</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    },
+    <span class="hljs-attr">copyright</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    },
+    <span class="hljs-attr">privacy</span>: {
+      <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">url</span>: <span class="hljs-string">''</span>
+    }
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/legalInfo.js#L51-L55'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usemediamuted'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useMediaMuted()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns boolean indicating whether the entry is currently muted.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useMediaMuted()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/useMediaMuted.js#L27-L29'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useportraitorientation'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>usePortraitOrientation()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns boolean indicating whether viewport orientation is currently
+portrait.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>usePortraitOrientation()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/frontend/usePortraitOrientation.js#L7-L9'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useshareproviders'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useShareProviders($0)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns a list of attributes (icon, name and url) of all configured share providers of the entry.
+The url provides a %{url} placeholder where the link can be inserted.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useShareProviders($0: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>$0.isPhonePlatform</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> shareProviders = useShareProviders(options);
+shareProviders <span class="hljs-comment">// =&gt;</span>
+  [
+    {
+      <span class="hljs-attr">icon</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FacebookSVGIcon</span> /&gt;</span>,
+      name: 'Facebook',
+      url: http://www.facebook.com/sharer/sharer.php?u=%{url}
+    },
+    {
+      icon: <span class="hljs-tag">&lt;<span class="hljs-name">TwitterSVGIcon</span> /&gt;</span>,
+      name: 'Twitter',
+      url: https://twitter.com/intent/tweet?url=%{url}
+    }
+  ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/sharing.js#L34-L83'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='useshareurl'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useShareUrl()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns the share url of the entry.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useShareUrl()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> shareUrl = useShareUrl();
+shareUrl <span class="hljs-comment">// =&gt; "http://test.host/test"</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/sharing.js#L110-L119'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='usetheme'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useTheme()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Returns an object containing theme asset paths.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>useTheme()</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> theme = useTheme();
+theme <span class="hljs-comment">// =&gt;</span>
+  {
+    <span class="hljs-attr">assets</span>: {
+      <span class="hljs-attr">logoDesktop</span>: <span class="hljs-string">'path/to/logoDesktop.svg'</span>,
+      <span class="hljs-attr">logoMobile</span>: <span class="hljs-string">'path/to/logoMobile.svg'</span>
+    },
+    <span class="hljs-attr">options</span>: {
+      <span class="hljs-comment">// options passed to `themes.register` in `pageflow.rb` initializer</span>
+      <span class="hljs-comment">// with camleized keys.</span>
+    }
+  }</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/entryState/theme.js#L21-L25'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='spec-support'>
+      Spec Support
+    </h3>
+    
+  </div>
+  
+
+  <p>Helper functions to use in specs.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='normalizeseed'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>normalizeSeed(options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Construct data structure that resembles seed generated by server
+side JBuilder templates.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>normalizeSeed(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.imageFileUrlTemplates</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Mapping of url template names to url templates.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.prettyUrl</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>The entry's url (Default share url).
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.shareUrlTemplates</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Mapping of share provider names to sharing urls.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.defaultFileRights</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>Default file rights of entry's account.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.legalInfo</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>imprint, copyright and privacy information of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.themeOptions</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Options set via theme registration.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.themeAssets</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Paths to theme assets.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.entry</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.imageFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with image file attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.videoFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with video file attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.audioFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with audio file attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.textTrackFiles</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with text track file attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.chapters</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with chapter attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sections</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with section attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.contentElements</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with content element attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.widgets</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>Array of objects with widget attributes of entry.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.fileUrlTemplates</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.fileModelTypes</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.additionalSeedData</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        Data that resembles seed generated by server side rendering.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/testHelpers/normalizeSeed.js#L24-L110'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='renderinentry'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>renderInEntry(ui, options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a component that depends on entry state. Accepts all options
+supported by <a href="https://testing-library.com/docs/react-testing-library/api#render"><code>render</code> of
+<code>@testing-library/react</code></a>.</p>
+<p>The <code>seed</code> option can be used to simulate rendering the component
+in the published entry. Data passed in this option would normally
+be rendered in a server side JBuilder template.</p>
+<p>The <code>setup</code> option can be used to simulate rendering the component
+in the editor where data is synchronized from Backbone models.</p>
+<p>To be able to render components that expect the result of certain
+hooks as part of their props, instead of a React component, you can
+pass a function returning a React component as first parameter. The
+function will be evaluated in a context of a React component and
+can thus make use of hooks</p>
+<pre><code>// DOES NOT WORK
+renderInEntry(&#x3C;Image file={useFile({collectionName: 'imageFiles', permaId: 4})} />, {seed});
+
+// WORKS
+renderInEntry(() => &#x3C;Image file={useFile({collectionName: 'imageFiles', permaId: 4})} />, {seed});
+</code></pre>
+<p>When using the <code>rerender</code> function from the result, you again need
+to use the same type of parameter you passed to the original
+<code>renderInEntry</code> call.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>renderInEntry(ui: (React.Component | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ui</span> <code class='quiet'>((React.Component | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>))</code>
+	    React component or function returning a React component
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.seed</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Seed data for entry state. Passed through 
+<a href="#normalizeseed">normalizeSeed</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.setup</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>  Function that gets called with the internal entry state dispatch
+function. The normalized seed constructed from the 
+<code>seed</code>
+ option
+is passed as a second parameter.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.wrapper</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.consent</span> <code class='quiet'>any</code>
+  
+    (default <code>Consent.create()</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>...options</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/testHelpers/rendering.js#L45-L83'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='renderhookinentry'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>renderHookInEntry(callback, options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Render a hook that depends on entry state.  Accepts all options
+supported by <a href="https://react-hooks-testing-library.com/reference/api"><code>renderHook</code> of
+<code>@testing-library/react-hooks</code></a></p>
+<p>Can be used to test selector hooks which extract information from
+the entry state.</p>
+
+  
+    <div class='pre p1 fill-light mt0'>renderHookInEntry(callback: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    Function that calls the hook.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.seed</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>Seed data for entry state. Passed through 
+<a href="#normalizeseed">normalizeSeed</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.setup</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</code>
+  </td>
+  <td class='break-word'><span>See 
+<a href="#renderinentry">renderInEntry</a>
+.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.wrapper</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>...options</span> <code class='quiet'></code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/src/testHelpers/rendering.js#L98-L104'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='storybook-support'>
+      Storybook Support
+    </h3>
+    
+  </div>
+  
+
+  <p>Helper functions to use in content element stories.</p>
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='filepermaid'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>filePermaId(collectionName, testReferenceName)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>When generating a <code>.storybook/seed.json</code> via the
+<code>pageflow_scrolled:storybook:seed:setup</code> Rake task, a couple of
+examples files are created. This method allows getting the perma id
+of one of those files from one of the following reference names:</p>
+<ul>
+<li>"turtle" (image)</li>
+<li>"interview_toni" (video)</li>
+<li>"quicktime_jingle" (audio)</li>
+</ul>
+
+  
+    <div class='pre p1 fill-light mt0'>filePermaId(collectionName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, testReferenceName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collectionName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    A name of a files collection like 
+<code>"imageFiles"</code>
+.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>testReferenceName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name of a predefined file from the seed JSON file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// inlineImage/stories.js</span>
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./frontend'</span>;
+<span class="hljs-keyword">import</span> {storiesOfContentElement, filePermaId} <span class="hljs-keyword">from</span> <span class="hljs-string">'pageflow-scrolled/spec/support/stories'</span>;
+
+storiesOfContentElement(<span class="hljs-built_in">module</span>, {
+  <span class="hljs-attr">typeName</span>: <span class="hljs-string">'inlineImage'</span>,
+  <span class="hljs-attr">baseConfiguration</span>: {<span class="hljs-attr">id</span>: filePermaId(<span class="hljs-string">'imageFiles'</span>, <span class="hljs-string">'turtle'</span>)}
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/spec/support/stories.js#L111-L127'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='storiesofcontentelement'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>storiesOfContentElement(module, options, typeName, baseConfiguration, variants)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white border-bottom'>
+
+  
+
+  <p>Add default set of stories for content element to render it in
+different settings (e.g. different section layouts).</p>
+
+  
+    <div class='pre p1 fill-light mt0'>storiesOfContentElement(module: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, typeName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, baseConfiguration: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, variants: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>)</div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>module</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    the module global available in every file
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>typeName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Name the content element is registered as.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>baseConfiguration</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	      Configuration to use for all added stories. A heading element,
+for example, would require a text.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>variants</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>)</code>
+	      An array of objects each containing a 
+<code>name</code>
+ and a
+
+<code>configuration</code>
+ property. The configurations will be merged into
+the 
+<code>baseConfiguration</code>
+ to create further examples that shall be
+rendered as stories.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// heading/stories.js</span>
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./frontend'</span>;
+<span class="hljs-keyword">import</span> {storiesOfContentElement, filePermaId} <span class="hljs-keyword">from</span> <span class="hljs-string">'pageflow-scrolled/spec/support/stories'</span>;
+
+storiesOfContentElement(<span class="hljs-built_in">module</span>, {
+  <span class="hljs-attr">typeName</span>: <span class="hljs-string">'heading'</span>,
+  <span class="hljs-attr">baseConfiguration</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">'Some Heading'</span>
+  },
+  <span class="hljs-attr">variants</span>: [
+    {
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Large'</span>,
+      <span class="hljs-attr">configuration</span>: {<span class="hljs-attr">size</span>: <span class="hljs-string">'large'</span>}
+    }
+  ]
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="pt1 right-align">
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/codevise/pageflow/blob/e0590ade0dde4e7a570130cfe32b1809fa6f2527/entry_types/scrolled/package/spec/support/stories.js#L55-L84'>
+        <span>View source</span>
+      </a>
+    </div>
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
